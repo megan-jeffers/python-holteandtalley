@@ -3,7 +3,7 @@ from .densityProfile import densityProfile
 from .salinityProfile import salinityProfile
 
 class HolteAndTalley:
-    def __init__(self,pressures,temperatures,salinities=[],densities=[]):
+    def __init__(self,pressures,temperatures,salinities,densities):
         self.temp = tempProfile(pressures,temperatures)
         self.tempMLD = self.temp.findMLD()
         if len(salinities) != 0 and len(densities) != 0:
